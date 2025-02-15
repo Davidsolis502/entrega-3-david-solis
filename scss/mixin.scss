@@ -1,0 +1,34 @@
+// Mixins
+@mixin flex-center($direction: row, $gap: 0) { //centra elementos y maneja direcciones de flexbox.
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin responsive-img($width: 100px, $height: auto) { //define imágenes con  sus tamaños.
+    width: $width;
+    height: $height;
+    object-fit: cover;
+}
+
+@mixin text-style($align: center, $color: $color-text) { //configura ,alinea y pone color al texto.
+    text-align: $align;
+    color: $color;
+}
+
+@mixin button-style($bg-color, $hover-color) { //colores de botones y su hover.
+    color: $color-text;
+    background-color: $bg-color !important;
+
+    &:hover {
+        background-color: $hover-color !important;
+    }
+}
+@mixin responsive-video($max-width) { // responsividad del video.
+    @media (max-width: $max-width) {
+        width: 100%;
+        height: auto;
+    }
+}
