@@ -1,5 +1,7 @@
+//import
 @import "../scss/variables.scss";
 @import "../scss/mixin.scss";
+
 // Reset
 * {
     margin: 0;
@@ -46,7 +48,7 @@ body {
     }
 }
 
-// Productos
+// Nesting
 .productos {
    @include text-style(center);
     padding: 20px;
@@ -91,7 +93,7 @@ body {
         object-fit: cover;
     }
 }
-
+//Nesting
 // Navbar hamburguesa
 .navbar {
     background-color: $color-menu-hamburguesa !important; // personaliza el color del menu
@@ -108,6 +110,7 @@ body {
     background-color: black;
 }
 
+// Nesting
 // Header
 header {
     @include flex-center(space-between);
@@ -180,7 +183,7 @@ video {
 }
 
 // Responsividad tablet 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .logo {
         @include responsive-img(30%,auto);
         margin: 20px;
